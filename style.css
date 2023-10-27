@@ -232,11 +232,55 @@ header a:hover{
 
 }
 
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
 
+.centered-content a {
+    margin-top: 20px;
+}
 
+.download-button {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 10px 5px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: 2px solid #064789;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #EBF2FA;
+    background: linear-gradient(135deg, #0064a8, #06325a);
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+    position: relative;
+}
 
+.download-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    border-radius: inherit;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
 
+.download-button:hover {
+    background: linear-gradient(135deg, #06325a, #0064a8);
+    transform: scale(1.05);
+}
 
+.download-button:hover::before {
+    opacity: 1;
+}
 
 
 footer{
@@ -275,6 +319,97 @@ footer .icons{
 footer .icons ion-icon{
     margin: 15px
 }
+
+#download-app {
+    background-color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.download-title {
+    font-size: 2.5em;
+    color: #064789;
+    text-align: center;
+}
+
+.quote-text {
+    font-size: 1.6em;
+    color: #333;
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download-phrase {
+    font-size: 1.4em;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.quote-text::before,
+.quote-text::after {
+    content: "“";
+}
+
+
+#download-app .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.text-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #064789;
+}
+
+.text-content .app-description {
+    font-size: 1.4em;
+    color: #333;
+}
+
+.mobile-mockup img {
+    max-height: 600px;
+    width: auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.app-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.app-icons a {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.app-icons a:hover {
+    transform: scale(1.1);
+}
+
+.app-icon {
+    width: 150px;
+    height: auto;
+}
+
 
 @media (min-width: 720px){
     header .container{
